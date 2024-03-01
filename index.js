@@ -3,7 +3,6 @@ function displayItems(){
     let url = `https://api.jikan.moe/v4/anime?q=${text}&sfw`;
     let items = document.getElementById('items');
     while(items.firstChild) items.removeChild(items.firstChild);
-    console.log(url);
     const apiFetch = fetch(url, {mode : 'cors'});
     const details = apiFetch.then((response) => {
         return response.json();
@@ -30,7 +29,6 @@ function displayItems(){
             newDiv.appendChild(link);
 
             items.appendChild(newDiv);
-            console.log(element);
         });
     });
     
