@@ -57,20 +57,22 @@ body {
     padding: 1rem;
 }
 
-.items{
+#items{
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     gap: 20px;
+    padding: 10px;
+    object-fit: cover;
 } 
 
 .item{
+    object-fit: cover;
     background-color: var(--white);
-    border-radius: 15px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(4,1fr);
-    row-gap: 15px;
+    padding: 20px;
+    padding-bottom: 30px;
+    min-width: 300px;
+    max-width: 300px;
 }
 
 button{
@@ -85,5 +87,26 @@ button{
 
 button:hover{
     background-color: var(--light-green);
+}
+
+.image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.para{
+    max-width: 100%;
+    color: #050505;
+    font-family: 'Poppins', sans-serif;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+a{
+    text-decoration: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
